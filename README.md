@@ -42,6 +42,10 @@ Run the following command to start the container and get a bash prompt
 ### 3. Start pyspark
     ./bin/pyspark  # open an interactive python shell with SparkContext as sc
 
+or just 
+
+    pyspark 
+
 ### 4. Verify installation
 To verify pyspark, run the following example Spark program:
 
@@ -51,6 +55,17 @@ This should print a bunch of debugging output, and on the last line,
 print the output, "1000".
 
 To quit the interpreter, hit `<Ctrl> + D`.
+
+# Run locally your version 
+
+### 1. Build the Dockerfile 
+    docker build .
+
+### 2. Run the container 
+    docker run -it <SHA> /bin/bash 
+
+where <SHA> is the Docker SHA that appears after the build command, 
+it is mentioned on the last line. 
 
 # How to run a cluster of containers with [Docker Compose](http://docs.docker.com/compose)
 
